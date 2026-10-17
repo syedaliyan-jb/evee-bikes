@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evee Electric Bikes Pakistan - Future of Urban Mobility</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#8cc63f',
+                            dark: '#0f172a',
+                            accent: '#10b981',
+                            light: '#f8fafc',
+                            card: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Brush Splash effect inspired by the target image background */
+        .brush-bg {
+            background: radial-gradient(circle at center, rgba(140, 198, 63, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+        }
+        .brush-shape {
+            clip-path: polygon(7% 12%, 93% 5%, 98% 88%, 3% 95%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8cc63f;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-lime selection:text-slate-950">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 text-2xl font-black tracking-wider">
+                <span class="text-brand-lime text-3xl"><i class="fa-solid => fa-bolt"></i></span>
+                <span class="bg-gradient-to-r from-white via-slate-200 to-brand-lime bg-clip-text text-transparent">evee</span>
+                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-brand-lime/20 text-brand-lime border border-brand-lime/30">ELECTRIC</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#hero" class="hover:text-brand-lime transition-colors">Home</a>
+                <a href="#models" class="hover:text-brand-lime transition-colors">Electric Scooter Models</a>
+                <a href="#features" class="hover:text-brand-lime transition-colors">Key Features</a>
+                <a href="#calculator" class="hover:text-brand-lime transition-colors">Savings Calculator</a>
+                <a href="#contact" class="hover:text-brand-lime transition-colors">Contact Us</a>
+            </nav>
+
+            <!-- Call to Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#models" class="px-5 py-2.5 rounded-full bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold transition-all transform hover:scale-105 shadow-lg shadow-brand-lime/20">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menuBtn" class="md:hidden text-2xl text-slate-300 hover:text-brand-lime focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-slate-300 hover:text-brand-lime">Home</a>
+            <a href="#models" class="block py-2 text-slate-300 hover:text-brand-lime">Models & Pricing</a>
+            <a href="#features" class="block py-2 text-slate-300 hover:text-brand-lime">Features</a>
+            <a href="#calculator" class="block py-2 text-slate-300 hover:text-brand-lime">Savings Calculator</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-brand-lime">Contact</a>
+            <a href="#models" class="inline-block w-full text-center py-3 rounded-xl bg-brand-lime text-slate-950 font-bold">
+                Book Test Drive
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Featured Evee Bike with Green Brush Art Background) -->
+    <section id="hero" class="relative overflow-hidden py-12 md:py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <!-- Glow accents -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-lime/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lime/10 border border-brand-lime/30 text-brand-lime text-xs font-bold tracking-wide uppercase">
+                        <i class="fa-solid fa-leaf"></i> 100% Eco-Friendly Scooter
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        Ride the Future with <br/>
+                        <span class="text-brand-lime">EVEE SCUBE</span> Electric
+                    </h1>
+
+                    <p class="text-slate-400 text-lg max-w-xl mx-auto lg:mx-0 font-normal">
+                        Experience smooth, zero-emission urban commuting with premium build quality, modern digital console, and long-range battery performance designed for Pakistani roads.
+                    </p>
+
+                    <!-- Quick Specs Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-2 max-w-md mx-auto lg:mx-0">
+                        <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                            <p class="text-brand-lime font-extrabold text-xl sm:text-2xl">70+ km</p>
+                            <p class="text-slate-400 text-xs">Range / Charge</p>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                            <p class="text-brand-lime font-extrabold text-xl sm:text-2xl">60 km/h</p>
+                            <p class="text-slate-400 text-xs">Top Speed</p>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                            <p class="text-brand-lime font-extrabold text-xl sm:text-2xl">4-5 hrs</p>
+                            <p class="text-slate-400 text-xs">Fast Charge</p>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA Button -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-slate-400 block">Starting From</span>
+                            <span class="text-3xl font-extrabold text-white">PKR 370,000</span>
+                        </div>
+                        <a href="#models" class="px-8 py-4 rounded-full bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold transition-all shadow-xl shadow-brand-lime/25 flex items-center gap-2">
+                            <span>Explore Models</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Section (Evee Scube Image with Green Paint Effect) -->
+                <div class="lg:col-span-6 relative flex justify-center items-center">
+                    <!-- Styled background mimicking the lime green brush stroke -->
+                    <div class="relative w-full max-w-lg aspect-square flex justify-center items-center">
+                        
+                        <!-- Lime green stylized paint stroke background container -->
+                        <div class="absolute inset-0 bg-brand-lime transform -rotate-3 rounded-3xl opacity-90 filter drop-shadow-2xl scale-95 transition-transform hover:rotate-0 duration-500 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-[radial-gradient(#a3e635_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+                        </div>
+                        
+                        <!-- Scooter Image Container -->
+                        <div class="relative z-10 w-full flex items-center justify-center p-4">
+                            <img 
+                                src="Evee scube.jpg" 
+                                alt="Evee Scube Electric Scooter" 
+                                class="w-full h-auto object-contain max-h-[460px] drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                                onerror="this.src='https://placehold.co/600x500/1e293b/8cc63f?text=EVEE+SCUBE+Scooter'"
+                            />
+                        </div>
+
+                        <!-- Badge Overlay -->
+                        <div class="absolute bottom-4 right-4 z-20 bg-slate-950/90 border border-brand-lime/40 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-lime/20 flex items-center justify-center text-brand-lime">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-white">1 Year Warranty</p>
+                                <p class="text-[10px] text-slate-400">Battery & Motor Included</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY HIGHLIGHTS / ADVANTAGES -->
+    <section id="features" class="py-16 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-white">Why Choose <span class="text-brand-lime">Evee Scooter</span>?</h2>
+                <p class="text-slate-400 mt-2">Designed for maximum comfort, high fuel savings, and zero carbon emissions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 hover:border-brand-lime/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 text-brand-lime flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-lime group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Zero Fuel Costs</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Save thousands of Rupees monthly on expensive petrol. Charge at home effortlessly using standard sockets.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 hover:border-brand-lime/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 text-brand-lime flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-lime group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-battery-full"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Graphene / Lithium Tech</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Powered by modern long-life batteries providing reliable range and faster charging efficiency.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 hover:border-brand-lime/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 text-brand-lime flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-lime group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Smart Digital Console</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Sleek digital meter showing real-time speed, battery percentage, mode selection, and trip statistics.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 hover:border-brand-lime/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 text-brand-lime flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-lime group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Low Maintenance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">No engine oil changes, spark plugs, or tuning required. Minimal moving parts mean lower upkeep costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVEE MODELS & PRICING CATALOG -->
+    <section id="models" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-lime text-xs font-bold uppercase tracking-wider">Electric Scooters Collection</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Evee Bike Lineup & Prices</h2>
+                </div>
+
+                <!-- Filter Category Buttons -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="filterContainer">
+                    <button onclick="filterModels('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold border transition-all bg-brand-lime text-slate-950 border-brand-lime" data-filter="all">All Models</button>
+                    <button onclick="filterModels('scube')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border transition-all bg-slate-900 text-slate-300 border-slate-800 hover:border-brand-lime/50" data-filter="scube">Evee Scube</button>
+                    <button onclick="filterModels('c1')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border transition-all bg-slate-900 text-slate-300 border-slate-800 hover:border-brand-lime/50" data-filter="c1">Evee C1 Series</button>
+                    <button onclick="filterModels('nisa')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border transition-all bg-slate-900 text-slate-300 border-slate-800 hover:border-brand-lime/50" data-filter="nisa">Evee Nisa</button>
+                </div>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="scooterGrid">
+
+                <!-- Model 1: EVEE SCUBE -->
+                <div class="model-card bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden hover:border-brand-lime/60 transition-all duration-300 hover:-translate-y-2 group shadow-xl" data-category="scube">
+                    <div class="relative bg-gradient-to-b from-slate-800/50 to-slate-900 p-6 flex items-center justify-center h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-brand-lime text-slate-950 font-bold text-[10px] uppercase px-3 py-1 rounded-full">Flagship</span>
+                        <!-- Background Brush Glow -->
+                        <div class="absolute w-48 h-48 bg-brand-lime/20 rounded-full blur-2xl pointer-events-none"></div>
+                        <img src="Evee scube.jpg" alt="Evee Scube" class="relative z-10 max-h-52 object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x400/1e293b/8cc63f?text=EVEE+SCUBE'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Evee Scube</h3>
+                        <p class="text-slate-400 text-xs mb-4">Silver / Black Metallic Edition</p>
+
+                        <!-- Specs List -->
+                        <div class="grid grid-cols-2 gap-3 text-xs bg-slate-950/60 p-3.5 rounded-2xl border border-slate-800 mb-6">
+                            <div>
+                                <span class="text-slate-500 block">Battery</span>
+                                <span class="text-slate-200 font-semibold">72V 38Ah Graphene</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Range</span>
+                                <span class="text-brand-lime font-bold">70 - 80 km</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Top Speed</span>
+                                <span class="text-slate-200 font-semibold">60 km/h</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Charging Time</span>
+                                <span class="text-slate-200 font-semibold">4 - 5 Hours</span>
+                            </div>
+                        </div>
+
+                        <!-- Price & Order -->
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="text-[10px] text-slate-400 block uppercase">Price in Pakistan</span>
+                                <span class="text-2xl font-extrabold text-white">PKR 370,000</span>
+                            </div>
+                            <button onclick="openBookingModal('Evee Scube', 'PKR 370,000')" class="px-5 py-2.5 rounded-xl bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold text-sm transition-all shadow-md shadow-brand-lime/20">
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 2: EVEE C1 AIR -->
+                <div class="model-card bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden hover:border-brand-lime/60 transition-all duration-300 hover:-translate-y-2 group shadow-xl" data-category="c1">
+                    <div class="relative bg-gradient-to-b from-slate-800/50 to-slate-900 p-6 flex items-center justify-center h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-sky-500 text-slate-950 font-bold text-[10px] uppercase px-3 py-1 rounded-full">Popular</span>
+                        <div class="absolute w-48 h-48 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                        <img src="https://placehold.co/500x400/0f172a/8cc63f?text=EVEE+C1+AIR" alt="Evee C1 Air" class="relative z-10 max-h-52 object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Evee C1 Air</h3>
+                        <p class="text-slate-400 text-xs mb-4">Matte Red / Dark Blue Options</p>
+
+                        <!-- Specs List -->
+                        <div class="grid grid-cols-2 gap-3 text-xs bg-slate-950/60 p-3.5 rounded-2xl border border-slate-800 mb-6">
+                            <div>
+                                <span class="text-slate-500 block">Battery</span>
+                                <span class="text-slate-200 font-semibold">72V 30Ah Dry Battery</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Range</span>
+                                <span class="text-brand-lime font-bold">70 km</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Top Speed</span>
+                                <span class="text-slate-200 font-semibold">55 km/h</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Charging Time</span>
+                                <span class="text-slate-200 font-semibold">6 - 7 Hours</span>
+                            </div>
+                        </div>
+
+                        <!-- Price & Order -->
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="text-[10px] text-slate-400 block uppercase">Price in Pakistan</span>
+                                <span class="text-2xl font-extrabold text-white">PKR 300,000</span>
+                            </div>
+                            <button onclick="openBookingModal('Evee C1 Air', 'PKR 300,000')" class="px-5 py-2.5 rounded-xl bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold text-sm transition-all shadow-md shadow-brand-lime/20">
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 3: EVEE C1 PRO -->
+                <div class="model-card bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden hover:border-brand-lime/60 transition-all duration-300 hover:-translate-y-2 group shadow-xl" data-category="c1">
+                    <div class="relative bg-gradient-to-b from-slate-800/50 to-slate-900 p-6 flex items-center justify-center h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-emerald-500 text-slate-950 font-bold text-[10px] uppercase px-3 py-1 rounded-full">Long Range</span>
+                        <div class="absolute w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                        <img src="https://placehold.co/500x400/0f172a/8cc63f?text=EVEE+C1+PRO" alt="Evee C1 Pro" class="relative z-10 max-h-52 object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Evee C1 Pro</h3>
+                        <p class="text-slate-400 text-xs mb-4">Gloss White / Gunmetal Gray</p>
+
+                        <!-- Specs List -->
+                        <div class="grid grid-cols-2 gap-3 text-xs bg-slate-950/60 p-3.5 rounded-2xl border border-slate-800 mb-6">
+                            <div>
+                                <span class="text-slate-500 block">Battery</span>
+                                <span class="text-slate-200 font-semibold">72V 30Ah Lithium-Ion</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Range</span>
+                                <span class="text-brand-lime font-bold">90 - 100 km</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Top Speed</span>
+                                <span class="text-slate-200 font-semibold">65 km/h</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Charging Time</span>
+                                <span class="text-slate-200 font-semibold">4 Hours</span>
+                            </div>
+                        </div>
+
+                        <!-- Price & Order -->
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="text-[10px] text-slate-400 block uppercase">Price in Pakistan</span>
+                                <span class="text-2xl font-extrabold text-white">PKR 355,000</span>
+                            </div>
+                            <button onclick="openBookingModal('Evee C1 Pro', 'PKR 355,000')" class="px-5 py-2.5 rounded-xl bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold text-sm transition-all shadow-md shadow-brand-lime/20">
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 4: EVEE NISA -->
+                <div class="model-card bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden hover:border-brand-lime/60 transition-all duration-300 hover:-translate-y-2 group shadow-xl" data-category="nisa">
+                    <div class="relative bg-gradient-to-b from-slate-800/50 to-slate-900 p-6 flex items-center justify-center h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-pink-500 text-white font-bold text-[10px] uppercase px-3 py-1 rounded-full">Compact</span>
+                        <div class="absolute w-48 h-48 bg-pink-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                        <img src="https://placehold.co/500x400/0f172a/8cc63f?text=EVEE+NISA" alt="Evee Nisa" class="relative z-10 max-h-52 object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Evee Nisa</h3>
+                        <p class="text-slate-400 text-xs mb-4">Pastel Blue / Soft White</p>
+
+                        <!-- Specs List -->
+                        <div class="grid grid-cols-2 gap-3 text-xs bg-slate-950/60 p-3.5 rounded-2xl border border-slate-800 mb-6">
+                            <div>
+                                <span class="text-slate-500 block">Battery</span>
+                                <span class="text-slate-200 font-semibold">60V 20Ah Graphene</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Range</span>
+                                <span class="text-brand-lime font-bold">50 - 60 km</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Top Speed</span>
+                                <span class="text-slate-200 font-semibold">45 km/h</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Charging Time</span>
+                                <span class="text-slate-200 font-semibold">5 Hours</span>
+                            </div>
+                        </div>
+
+                        <!-- Price & Order -->
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="text-[10px] text-slate-400 block uppercase">Price in Pakistan</span>
+                                <span class="text-2xl font-extrabold text-white">PKR 175,000</span>
+                            </div>
+                            <button onclick="openBookingModal('Evee Nisa', 'PKR 175,000')" class="px-5 py-2.5 rounded-xl bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold text-sm transition-all shadow-md shadow-brand-lime/20">
+                                Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SAVINGS CALCULATOR SECTION -->
+    <section id="calculator" class="py-16 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="text-brand-lime text-xs font-bold uppercase tracking-widest">Monthly Fuel Savings</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">Petrol vs Evee Electric Calculator</h2>
+                    <p class="text-slate-400 text-sm mt-1">Calculate how much money you will save every month switching to Evee Electric Scooter.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Slider inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-300 font-medium">Daily Travel Distance</span>
+                                <span class="text-brand-lime font-bold" id="distValue">30 km / day</span>
+                            </div>
+                            <input type="range" id="distRange" min="10" max="100" value="30" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-lime" oninput="calculateSavings()">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-300 font-medium">Petrol Price (PKR/Liter)</span>
+                                <span class="text-brand-lime font-bold" id="petrolValue">PKR 280</span>
+                            </div>
+                            <input type="range" id="petrolRange" min="200" max="400" value="280" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-lime" oninput="calculateSavings()">
+                        </div>
+                    </div>
+
+                    <!-- Result Box -->
+                    <div class="bg-gradient-to-br from-brand-lime/10 to-slate-900 border border-brand-lime/30 p-6 rounded-2xl text-center">
+                        <p class="text-xs uppercase text-slate-400 tracking-wider">Estimated Monthly Savings</p>
+                        <p class="text-4xl font-extrabold text-brand-lime my-2" id="monthlySavings">PKR 18,900</p>
+                        <p class="text-xs text-slate-400">Yearly Savings: <span class="text-white font-bold" id="yearlySavings">PKR 226,800</span></p>
+                        
+                        <div class="mt-4 pt-4 border-t border-slate-800 text-[11px] text-slate-400">
+                            *Calculated assuming petrol bike mileage 35 km/l vs Evee unit charging costs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <footer id="contact" class="bg-slate-950 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-2 text-2xl font-black">
+                        <span class="text-brand-lime text-3xl"><i class="fa-solid fa-bolt"></i></span>
+                        <span class="text-white">evee</span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Leading Pakistan towards modern, eco-friendly, and cost-effective electric mobility solutions.
+                    </p>
+                    <div class="flex gap-4 text-slate-400">
+                        <a href="#" class="hover:text-brand-lime transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-brand-lime transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-brand-lime transition-colors"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                        <a href="#" class="hover:text-brand-lime transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#hero" class="hover:text-brand-lime">Home</a></li>
+                        <li><a href="#models" class="hover:text-brand-lime">Scooter Models & Prices</a></li>
+                        <li><a href="#features" class="hover:text-brand-lime">Features</a></li>
+                        <li><a href="#calculator" class="hover:text-brand-lime">Savings Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Electric Models</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#models" class="hover:text-brand-lime">Evee Scube flagship</a></li>
+                        <li><a href="#models" class="hover:text-brand-lime">Evee C1 Air</a></li>
+                        <li><a href="#models" class="hover:text-brand-lime">Evee C1 Pro</a></li>
+                        <li><a href="#models" class="hover:text-brand-lime">Evee Nisa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact Us</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-lime"></i>
+                            <span>Main Showroom, Lahore & Karachi, Pakistan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-lime"></i>
+                            <span>+92 (300) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-lime"></i>
+                            <span>info@eveebikes.pk</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Evee Electric Bikes Pakistan. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">Warranty Registration</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ORDER / INQUIRY MODAL -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-lg rounded-3xl p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold text-brand-lime uppercase tracking-wider">Order & Inquiry</span>
+                <h3 class="text-2xl font-bold text-white mt-1" id="modalScooterTitle">Book Evee Scooter</h3>
+                <p class="text-slate-400 text-xs mt-1">Price: <span id="modalScooterPrice" class="text-brand-lime font-bold">PKR 0</span></p>
+            </div>
+
+            <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-300 font-medium mb-1">Full Name</label>
+                    <input type="text" required placeholder="Ali Khan" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-lime">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-slate-300 font-medium mb-1">Phone / WhatsApp</label>
+                        <input type="tel" required placeholder="0300 1234567" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-lime">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-300 font-medium mb-1">City</label>
+                        <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-lime">
+                            <option>Lahore</option>
+                            <option>Karachi</option>
+                            <option>Islamabad / Rawalpindi</option>
+                            <option>Faisalabad</option>
+                            <option>Multan</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs text-slate-300 font-medium mb-1">Inquiry Type</label>
+                    <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-lime">
+                        <option>Direct Purchase Booking</option>
+                        <option>Schedule a Test Drive</option>
+                        <option>Dealership Inquiry</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-brand-lime hover:bg-lime-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-brand-lime/20 mt-2">
+                    Submit Inquiry
+                </button>
+            </form>
+
+            <!-- Success Notification Message Box (In-modal instead of alert) -->
+            <div id="modalSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-sm text-center">
+                <i class="fa-solid fa-circle-check text-lg mb-1 block"></i>
+                Thank you! Your inquiry has been submitted successfully. Our sales team will contact you shortly.
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter Functionality for Bikes
+        function filterModels(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.model-card');
+
+            // Toggle button active classes
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('bg-brand-lime', 'text-slate-950', 'border-brand-lime');
+                    btn.classList.remove('bg-slate-900', 'text-slate-300', 'border-slate-800');
+                } else {
+                    btn.classList.remove('bg-brand-lime', 'text-slate-950', 'border-brand-lime');
+                    btn.classList.add('bg-slate-900', 'text-slate-300', 'border-slate-800');
+                }
+            });
+
+            // Show / Hide Cards
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Booking Modal Logic
+        const bookingModal = document.getElementById('bookingModal');
+        const modalScooterTitle = document.getElementById('modalScooterTitle');
+        const modalScooterPrice = document.getElementById('modalScooterPrice');
+        const modalSuccess = document.getElementById('modalSuccess');
+        const bookingForm = document.getElementById('bookingForm');
+
+        function openBookingModal(modelName, modelPrice) {
+            modalScooterTitle.innerText = "Book " + modelName;
+            modalScooterPrice.innerText = modelPrice;
+            modalSuccess.classList.add('hidden');
+            bookingForm.classList.remove('hidden');
+            
+            bookingModal.classList.remove('hidden');
+            setTimeout(() => {
+                bookingModal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeBookingModal() {
+            bookingModal.classList.add('opacity-0');
+            setTimeout(() => {
+                bookingModal.classList.add('hidden');
+            }, 300);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            bookingForm.classList.add('hidden');
+            modalSuccess.classList.remove('hidden');
+            setTimeout(() => {
+                closeBookingModal();
+            }, 3000);
+        }
+
+        // Savings Calculator Logic
+        function calculateSavings() {
+            const dist = parseInt(document.getElementById('distRange').value);
+            const petrolPrice = parseInt(document.getElementById('petrolRange').value);
+
+            document.getElementById('distValue').innerText = dist + " km / day";
+            document.getElementById('petrolValue').innerText = "PKR " + petrolPrice;
+
+            // Monthly Distance (30 days)
+            const monthlyKm = dist * 30;
+
+            // Petrol Bike: ~35km per Liter
+            const petrolLitersNeeded = monthlyKm / 35;
+            const petrolCost = petrolLitersNeeded * petrolPrice;
+
+            // EVEE Scooter: ~70km per full charge costing ~2.5 units (~PKR 120 per full charge)
+            const evCostPerKm = 120 / 70; 
+            const evCost = monthlyKm * evCostPerKm;
+
+            const monthlySave = Math.max(0, Math.round(petrolCost - evCost));
+            const yearlySave = monthlySave * 12;
+
+            document.getElementById('monthlySavings').innerText = "PKR " + monthlySave.toLocaleString();
+            document.getElementById('yearlySavings').innerText = "PKR " + yearlySave.toLocaleString();
+        }
+
+        // Run initial calculation on load
+        window.onload = function() {
+            calculateSavings();
+        };
+    </script>
+</body>
+</html>
